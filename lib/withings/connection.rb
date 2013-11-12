@@ -7,7 +7,7 @@ class Withings::Connection
     http_proxy uri.host, uri.port
   end
 
-  base_uri 'wbsapi.withings.net/v2'
+  base_uri 'wbsapi.withings.net'
   format :json
 
   def initialize(user)
