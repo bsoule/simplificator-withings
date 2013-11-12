@@ -7,7 +7,7 @@ class Withings::Connection
     http_proxy uri.host, uri.port
   end
 
-  base_uri 'wbsapi.withings.net'
+  base_uri 'wbsapi.withings.net/v2'
   format :json
 
   def initialize(user)
@@ -19,7 +19,7 @@ class Withings::Connection
     params.merge!({:oauth_signature => signature})
     
     response = self.get(path, :query => params)
-    verify_response!(response, path, params)
+    #verify_response!(response, path, params)
   end
 
 
@@ -29,7 +29,7 @@ class Withings::Connection
     params.merge!({:oauth_signature => signature})
     
     response = self.class.get(path, :query => params)
-    self.class.verify_response!(response, path, params)
+    #self.class.verify_response!(response, path, params)
   end
   
   protected

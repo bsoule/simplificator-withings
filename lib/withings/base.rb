@@ -1,6 +1,7 @@
 module Withings
   SCALE = 1
   BLOOD_PRESSURE_MONITOR = 4
+  PULSE = 16
   
   def self.consumer_secret=(value)
     @consumer_secret = value
